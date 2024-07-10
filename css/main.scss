@@ -1,9 +1,15 @@
 @import 
-    "./properties/fonts",
     "./properties/resets",
-    "./properties/properties",
+    "./properties/fonts",
     "./properties/mixins",
     "./properties/media",
+    "./properties/properties",
     "./properties/utils",
     "./properties/globals"
+;
+
+@import 
+    "./blocks/header",
+    "./blocks/footer",
+    "./blocks/section"
 ;

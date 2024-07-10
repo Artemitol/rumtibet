@@ -1,3 +1,25 @@
+:root {
+  --color-dark: #0B132A;
+  --color-light: #ffffff;
+  --color-accent: #004cff;
+  --h1-font-size: 70px;
+  --h2-font-size: 60px;
+  --h3-font-size: 50px;
+  --h4-font-size: 40px;
+  --h5-font-size: 30px;
+  --h6-font-size: 20px;
+  --p-font-size: 18px;
+  --site-padding-x: 100px;
+  --font-family-main: "Space Grotesk", sans-serif;
+  --font-style: normal;
+  --line-height: 1;
+  --font-size: 16px;
+  --border: 1px solid var(--color-dark);
+  --box-shadow: 1 1 var(--color-dark);
+  --border-radius: 10px;
+  --transition-duration: 0.2s;
+}
+
 .grid--1 {
   grid-template-columns: repeat(1, 1fr);
 }
@@ -33,4 +55,8 @@
 }
 .grid--12 {
   grid-template-columns: repeat(12, 1fr);
+}
+
+html {
+  font-size: 16px;
 }/*# sourceMappingURL=main.css.map */
