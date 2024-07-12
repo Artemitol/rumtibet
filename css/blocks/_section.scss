@@ -1,3 +1,8 @@
 .section {
+    width: 100%;
+    padding-block: 100px;
     
+    &--clr-gray {
+        color: var(--color-gray-2);
+    }
 }

@@ -3,7 +3,15 @@ html {
 }
 
 body {
-    // font
+    color: var(--color-dark);
+    background-image: url("/rumtibet/assets/bg-image.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+
+    @include mobile {
+        background-image: url("/rumtibet/assets/bg-image-mobile.png");
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -11,9 +19,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 // -- FONT SIZE --
-// h1 {
-//     font-size: var(--h1-font-size);
-// }
+h1 {
+    font-size: var(--h1-font-size);
+    margin-bottom: px-to-rem(20);
+}
 
 // h2 {
 //     font-size: var(--h2-font-size);
@@ -38,3 +47,16 @@ h1, h2, h3, h4, h5, h6 {
 // p {
 //     font-size: var(--p-font-size)
 // }
+
+* {
+    &:focus {
+        outline: var(--border-focus);
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+svg *[fill] { fill: currentColor; }
+svg *[stroke] { stroke: currentColor; }

@@ -1,7 +1,45 @@
+.site-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: var(--site-padding-x);
+    padding-top: var(--site-padding-top);
+}
+
+.site-content {
+    width: 100%;
+    max-width: calc(var(--content-max-width) - var(--site-padding-x));
+}
+
 .grid {
+    display: grid;
+
     @for $i from 1 through 12 {
-        &--#{$i} {
+        &--col-#{$i} {
             grid-template-columns: repeat(#{$i}, 1fr);
         }
+    }
+}
+
+.hidden {
+    @include hiden;
+}
+
+.hidden-desktop {
+    @include desktop {
+        @include hiden;
+    }
+}
+
+.hidden-tablet {
+    @include tablet {
+        @include hiden;
+    }
+}
+
+.hidden-mobile {
+    @include mobile {
+        @include hiden;
     }
 }

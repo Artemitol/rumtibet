@@ -1,0 +1,8 @@
+.text-link {
+    color: var(--color-light);
+
+    @include hover {
+        transition-duration: var(--transition-duration);
+        color: var(--color-accent-alt);
+    }
+}

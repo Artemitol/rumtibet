@@ -1,0 +1,11 @@
+.input-btn {
+    border: none;
+    color: var(--color-accent);
+    background-color: var(--color-gray-2);
+    transition-duration: var(--transition-duration);
+
+    @include hover {
+        color: var(--color-gray-2);
+        background-color: var(--color-accent);
+    }
+}

@@ -1,3 +1,58 @@
 .header {
-    
+    --menuColGap: clamp(15px, 2vw, 50px);
+    --menuListColGap: clamp(5px, 1.3vw, 24px);
+
+    &__inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__menu {
+        width: fit-content;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: var(--menuColGap);
+
+        &-list {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            column-gap: var(--menuListColGap);
+            list-style-type: none;
+        }
+
+        &-item {
+            width: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-link {
+            width: 100%;
+        }
+    }
+
+    &__logo-container {
+        width: fit-content;
+
+        @include tablet-small {
+            width: 14%;
+            height: auto;
+        }
+    }
+
+    &__logo {
+        @include tablet-small {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__burger-button {
+        color: var(--color-light)
+    }
 }

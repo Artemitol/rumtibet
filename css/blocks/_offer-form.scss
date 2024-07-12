@@ -1,0 +1,33 @@
+.offer-form {
+    $formColWidth: px-to-rem(180);
+
+    --formPadding: 40px;
+    --formGap: clamp(#{px-to-rem(5)}, 1vw ,#{px-to-rem(10)});
+    --blockRowGap: 8px;
+    --formColWidth: #{$formColWidth};
+
+    padding: var(--formPadding);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--formColWidth), 1fr));
+    border-radius: var(--border-radius-form);
+    column-gap: var(--formGap);
+    row-gap: calc(var(--formGap) * 1.2);
+    background-color: var(--color-light-transparent);
+
+    @include mobile {
+        --formPadding: 0;
+        
+        justify-items: start;
+        background-color: transparent;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        row-gap: var(--blockRowGap);
+    }
+
+    &__label {
+        margin-left: 8px;
+    }
+}
