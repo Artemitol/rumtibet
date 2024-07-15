@@ -1,6 +1,6 @@
 .button {
     height: fit-content;
-    padding: 12px 24px;
+    font-weight: 600;
     color: var(--color-light);
     background-color: var(--color-accent);
     border-radius: var(--border-radius-button);
@@ -19,6 +19,18 @@
         @include hover {
             color: var(--color-light);
             background-color: var(--color-accent);
+        }
+    }
+
+    &--small-size {
+        padding: 12px 24px;
+    }
+
+    &--medium-size {
+        padding: 16px 36px;
+
+        @include mobile {
+            padding: 12px 24px;    
         }
     }
 }

@@ -8,6 +8,9 @@
 </head>
 <body>
     <div class="site-wrapper">
+        <div class="site-wrapper__background">
+            <!-- Empty div block for bg image, which created in css -->
+        </div>
         <div class="site-content">
             <header class="header">
                 <div class="header__inner">
@@ -42,7 +45,7 @@
                                 <a class="header__menu-link text-link" aria-label="Перейти к контактам" href="">Контакты</a>
                             </li>
                         </ul>
-                        <button class="header__button button" type="button">
+                        <button class="header__button button button--small-size" type="button">
                             Консультация
                         </button>
                     </nav>
@@ -55,42 +58,80 @@
             </header>
             <main class="main">
                 <section class="section section--clr-gray">
-                    <div class="section__header section__header--offer">
-                        <h1>Насладись прогулкой в горах
+                    <div class="section__tittle">
+                        <h1 class="section__heading">Насладись прогулкой в горах
                             с командой единомышленников</h1>
                     </div>
                     <div class="section__content">
                         <form class="offer-form" action="">
                             <div class="offer-form__block hidden-mobile">
-                                <select class="offer-form__element input" name="location" id="location">
-                                    <option value="не выбрано" selected disabled>Локация для тура</option>
-                                    <option value="Тибет">Тибет</option>
-                                    <option value="Кавказ">Кавказ</option>
-                                    <option value="Магадан">Магадан</option>
-                                    <option value="Тбилиси">Тбилиси</option>
-                                    <option value="Баку">Баку</option>
+                                <select class="offer-form__element input input--transparent input-select" name="location" id="location">
+                                    <option class="input-select__option" value="не выбрано" selected disabled>Локация для тура</option>
+                                    <option class="input-select__option" value="Тибет">Тибет</option>
+                                    <option class="input-select__option" value="Кавказ">Кавказ</option>
+                                    <option class="input-select__option" value="Магадан">Магадан</option>
+                                    <option class="input-select__option" value="Тбилиси">Тбилиси</option>
+                                    <option class="input-select__option" value="Баку">Баку</option>
                                 </select>
                                 <label class="offer-form__label" for="location">выберите из списка</label>
                             </div>
                             <div class="offer-form__block hidden-mobile">
-                                <input class="offer-form__element input input-date" name="" id="" type="date">
-                                <label class="offer-form__label" for="location">укажите диапазон</label>
+                                <input class="offer-form__element input input--transparent input-date" name="date" id="date" type="date">
+                                <label class="offer-form__label" for="date">укажите диапазон</label>
                             </div>
                             <div class="offer-form__block hidden-mobile">
-                                <select class="offer-form__element input" name="location" id="location">
-                                    <option value="не выбрано" selected disabled>Участники</option>
-                                    <option value="1 человек">1 человек</option>
-                                    <option value="2 человека">2 человека</option>
-                                    <option value="3 человека">3 человека</option>
-                                    <option value="4 человека">4 человека</option>
-                                    <option value="5 человек">5 человек</option>
+                                <select class="offer-form__element input input--transparent input-select" name="members" id="members">
+                                    <option class="input-select__option" value="не выбрано" selected disabled>Участники</option>
+                                    <option class="input-select__option" value="1 человек">1 человек</option>
+                                    <option class="input-select__option" value="2 человека">2 человека</option>
+                                    <option class="input-select__option" value="3 человека">3 человека</option>
+                                    <option class="input-select__option" value="4 человека">4 человека</option>
+                                    <option class="input-select__option" value="5 человек">5 человек</option>
                                 </select>
-                                <label class="offer-form__label" for="location">минимум 4 человека</label>
+                                <label class="offer-form__label" for="members">минимум 4 человека</label>
                             </div>
                             <div class="offer-form__block">
-                                <input class="offer-form__input input input-btn" type="button" value="Найти программу">
+                                <input class="offer-form__input input input--transparent input-btn" type="button" value="Найти программу">
                             </div>
                         </form>
+                    </div>
+                </section>
+                <section class="section">
+                    <div class="section__tittle">
+                    </div>
+                    <div class="section__content">
+                        <div class="about">
+                            <div class="about__images-container">
+                                <img 
+                                    class="about__image hidden-mobile" 
+                                    src="/assets/about-image.png" 
+                                    alt="" 
+                                    
+                                    loading="lazy"
+                                >
+                                <img 
+                                    class="about__image" 
+                                    src="/assets/about-image-alt.png" 
+                                    alt="" 
+                                    
+                                    loading="lazy"
+                                >
+                            </div>
+                            <div class="about__body">
+                                <div class="section__title">
+                                    <h4 class="section__sub-heading">о нашем походе</h4>
+                                    <h2 class="section__heading">Исследуйте все горные массивы мира вместе с нами</h6>
+                                </div>
+                                <div class="about__paragraph">
+                                    <p>Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух
+                                        тысячелетий назад. Ричард МакКлинток, профессор латыни
+                                            из колледжа Hampden-Sydney, штат Вирджиния, взял одно из
+                                                самых странных слов в Lorem Ipsum, "consectetur"и занялся
+                                                    его поисками в классической латинской литературе.</p>
+                                </div>
+                                <button class="button button--medium-size" type="button">Программа тура</button>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>

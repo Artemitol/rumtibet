@@ -1,0 +1,16 @@
+.input-select {
+    &__option {
+        padding: 5px;
+        color: var(--color-dark);
+        
+        &:checked {
+            background-color: var(--color-accent);
+            color: var(--color-gray-2);
+        }
+
+        &:disabled {
+            background-color: var(--color-gray-3);
+            color: var(--color-gray-1);
+        }
+    }
+}

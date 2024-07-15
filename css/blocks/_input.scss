@@ -1,12 +1,15 @@
 .input {
     height: 52px;
     padding-inline: 16px;
-    color: var(--color-gray-2);
-    background: none;
-    border: var(--border);
     border-radius: var(--border-radius-input);
 
     @include tablet {
         padding-inline: 10px;
+    }
+
+    &--transparent {
+        color: var(--color-gray-2);
+        background: none;
+        border: var(--border);
     }
 }

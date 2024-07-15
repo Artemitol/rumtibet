@@ -1,0 +1,57 @@
+.about {
+    --imagesIntersectionAreaWidth: clamp(40px, 10vw, 130px);
+    --imagesIntersectionAreaHeight: clamp(100px, 10vw, 130px);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 30px;
+
+    @include mobile {
+        column-gap: 30px;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    &__images-container {
+        width: 100%;
+        max-width: 480px;
+        display: grid;
+        grid-template-columns:var(--imagesIntersectionAreaWidth) 1fr var(--imagesIntersectionAreaWidth);
+        grid-template-rows:var(--imagesIntersectionAreaHeight) 1fr var(--imagesIntersectionAreaHeight);
+
+        @include mobile {
+            order: 1;
+            display: flex;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+
+        &:first-child {
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
+        }
+
+        &:last-child {
+            grid-column: 2 / 4;
+            grid-row: 2 / 4; 
+        }
+    }
+
+    &__body {
+        width: 100%;
+        max-width: 580px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        row-gap: 40px;
+
+        @include mobile {
+            align-items: center;
+        }
+    }
+}

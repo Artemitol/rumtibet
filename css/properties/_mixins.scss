@@ -31,3 +31,16 @@
 
     @return #{$result}rem;
 }
+
+@mixin next-art($font-weight) {
+    font-family: var(--font-family);
+    font-style: var(--font-style);
+    letter-spacing: var(--letter-spacing);
+    font-weight: $font-weight;
+}
+
+@mixin nunito-sans($font-weight) {
+    font-family: var(--font-family-alt);
+    font-style: var(--font-style);
+    font-weight: $font-weight;
+}

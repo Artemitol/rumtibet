@@ -26,7 +26,7 @@ $mobile-middle: 480;
     --h3-font-size: 26px;
     --h4-font-size: 24px;
     --h5-font-size: 20px;
-    --h6-font-size: 20px;
+    --h6-font-size: 14px;
     --p-font-size: 18px;
 
     // WIDTH
@@ -39,12 +39,11 @@ $mobile-middle: 480;
     // FONT
     --font-size: #{$font-size}px;
     // next-art
-    --font-family: "NEXT ART", sans-serif;
+    --font-family: "Next Art", sans-serif;
     --letter-spacing: 1.02;
     --font-style: normal;
     // nunito-sans
     --font-family-alt: "Nunito Sans", sans-serif;
-    --font-style-alt: normal;
 
     // DECORATIONS
     --border: 1px solid var(--color-gray-1);
@@ -64,7 +63,17 @@ $mobile-middle: 480;
     } 
 
     @include mobile { 
+        // PADDING
         --site-padding-x: 16px;
         --site-padding-top: 20px;
+
+        // FONT SIZE
+        --h1-font-size: 28px;
+        --h2-font-size: 24px;
+        --h3-font-size: 18px;
+        --h4-font-size: 16px;
+        --h5-font-size: 20px;
+        --h6-font-size: 14px;
+        --p-font-size: 16px;
     }
 }

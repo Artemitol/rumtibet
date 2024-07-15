@@ -5,6 +5,27 @@
     align-items: center;
     padding-inline: var(--site-padding-x);
     padding-top: var(--site-padding-top);
+
+    &__background {
+        --bgImageHeight: 1000px;
+
+        width: 100vw;
+        height: var(--bgImageHeight);
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url("/assets/bg-image.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        
+        @include mobile {
+            --bgImageHeight: 600px;
+
+            background-image: url("/assets/bg-image-mobile.png");
+        }
+    }
 }
 
 .site-content {

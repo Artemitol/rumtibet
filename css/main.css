@@ -55,6 +55,96 @@ ul, ol {
   isolation: isolate;
 }
 
+@font-face {
+  font-family: "Next Art", sans-serif;
+  src: url(/fonts/NEXTART-Bold) format(woff2);
+}
+@font-face {
+  font-family: "Next Art", sans-serif;
+  src: url(/fonts/NEXTART-Heavy.woff2) format(woff2);
+}
+@font-face {
+  font-family: "Next Art", sans-serif;
+  src: url(/fonts/NEXTART-Light.woff2) format(woff2);
+}
+@font-face {
+  font-family: "Next Art", sans-serif;
+  src: url(/fonts/NEXTART-SemiBold.woff2) format(woff2);
+}
+@font-face {
+  font-family: "Next Art", sans-serif;
+  src: url(/fonts/NEXTART.woff2) format(woff2);
+}
+@font-face {
+  font-family: "Nunito Sans", sans-serif;
+  src: url(/fonts/NunitoSans-ExtraLightItalic) format("woff2");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Nunito Sans", sans-serif;
+  src: url(/fonts/NunitoSans-Light) format("woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nunito Sans", sans-serif;
+  src: url(/fonts/NunitoSans-Italic) format("woff2");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Nunito Sans", sans-serif;
+  src: url(/fonts/NunitoSans-BoldItalic) format("woff2");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Nunito Sans", sans-serif;
+  src: url(/fonts/NunitoSans-BlackItalic) format("woff2");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Nunito Sans", sans-serif;
+  src: url(/fonts/NunitoSans-LightItalic) format("woff2");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Nunito Sans", sans-serif;
+  src: url(/fonts/NunitoSans-Black) format("woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nunito Sans", sans-serif;
+  src: url(/fonts/NunitoSans-ExtraBold) format("woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nunito Sans", sans-serif;
+  src: url(/fonts/NunitoSans-Bold) format("woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nunito Sans", sans-serif;
+  src: url(/fonts/NunitoSans-SemiBoldItalic) format("woff2");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Nunito Sans", sans-serif;
+  src: url(/fonts/NunitoSans-ExtraLight) format("woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nunito Sans", sans-serif;
+  src: url(/fonts/NunitoSans-Regular) format("woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nunito Sans", sans-serif;
+  src: url(/fonts/NunitoSans-ExtraBoldItalic) format("woff2");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Nunito Sans", sans-serif;
+  src: url(/fonts/NunitoSans-SemiBold) format("woff2");
+  font-style: normal;
+}
 :root {
   --color-dark: #18121E;
   --color-light: #ffffff;
@@ -69,17 +159,16 @@ ul, ol {
   --h3-font-size: 26px;
   --h4-font-size: 24px;
   --h5-font-size: 20px;
-  --h6-font-size: 20px;
+  --h6-font-size: 14px;
   --p-font-size: 18px;
   --content-max-width: 1280px;
   --site-padding-x: 50px;
   --site-padding-top: 16px;
   --font-size: 16px;
-  --font-family: "NEXT ART", sans-serif;
+  --font-family: "Next Art", sans-serif;
   --letter-spacing: 1.02;
   --font-style: normal;
   --font-family-alt: "Nunito Sans", sans-serif;
-  --font-style-alt: normal;
   --border: 1px solid var(--color-gray-1);
   --border-accent: 1px solid var(--color-accent);
   --border-focus: 4px dotted var(--color-accent-alt);
@@ -98,6 +187,13 @@ ul, ol {
   :root {
     --site-padding-x: 16px;
     --site-padding-top: 20px;
+    --h1-font-size: 28px;
+    --h2-font-size: 24px;
+    --h3-font-size: 18px;
+    --h4-font-size: 16px;
+    --h5-font-size: 20px;
+    --h6-font-size: 14px;
+    --p-font-size: 16px;
   }
 }
 
@@ -108,6 +204,24 @@ ul, ol {
   align-items: center;
   padding-inline: var(--site-padding-x);
   padding-top: var(--site-padding-top);
+}
+.site-wrapper__background {
+  --bgImageHeight: 1000px;
+  width: 100vw;
+  height: var(--bgImageHeight);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("/assets/bg-image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media (max-width: 767px) {
+  .site-wrapper__background {
+    --bgImageHeight: 600px;
+    background-image: url("/assets/bg-image-mobile.png");
+  }
 }
 
 .site-content {
@@ -226,21 +340,48 @@ html {
 }
 
 body {
+  font-family: var(--font-family-alt);
+  font-style: var(--font-style);
+  font-weight: 400;
   color: var(--color-dark);
-  background-image: url("/rumtibet/assets/bg-image.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: top;
-}
-@media (max-width: 767px) {
-  body {
-    background-image: url("/rumtibet/assets/bg-image-mobile.png");
-  }
 }
 
 h1 {
+  font-family: var(--font-family);
+  font-style: var(--font-style);
+  letter-spacing: var(--letter-spacing);
+  font-weight: 700;
   font-size: var(--h1-font-size);
+  font-weight: 700;
   margin-bottom: 1.25rem;
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+  font-weight: 800;
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+  font-weight: 800;
+}
+
+h4 {
+  font-size: var(--h4-font-size);
+  font-weight: 400;
+}
+
+h5 {
+  font-weight: 700;
+  font-size: var(--h5-font-size);
+}
+
+h6 {
+  font-size: var(--h6-font-size);
+}
+
+p {
+  font-size: var(--p-font-size);
 }
 
 *:focus {
@@ -262,7 +403,7 @@ svg *[stroke] {
 .button {
   height: -moz-fit-content;
   height: fit-content;
-  padding: 12px 24px;
+  font-weight: 600;
   color: var(--color-light);
   background-color: var(--color-accent);
   border-radius: var(--border-radius-button);
@@ -297,6 +438,17 @@ svg *[stroke] {
     background-color: var(--color-accent);
   }
 }
+.button--small-size {
+  padding: 12px 24px;
+}
+.button--medium-size {
+  padding: 16px 36px;
+}
+@media (max-width: 767px) {
+  .button--medium-size {
+    padding: 12px 24px;
+  }
+}
 
 .text-link {
   color: var(--color-light);
@@ -317,9 +469,6 @@ svg *[stroke] {
 .input {
   height: 52px;
   padding-inline: 16px;
-  color: var(--color-gray-2);
-  background: none;
-  border: var(--border);
   border-radius: var(--border-radius-input);
 }
 @media (min-width: 768px) and (max-width: 1279px) {
@@ -327,9 +476,27 @@ svg *[stroke] {
     padding-inline: 10px;
   }
 }
+.input--transparent {
+  color: var(--color-gray-2);
+  background: none;
+  border: var(--border);
+}
 
 .input-date {
   color-scheme: blue;
+}
+
+.input-select__option {
+  padding: 5px;
+  color: var(--color-dark);
+}
+.input-select__option:checked {
+  background-color: var(--color-accent);
+  color: var(--color-gray-2);
+}
+.input-select__option:disabled {
+  background-color: var(--color-gray-3);
+  color: var(--color-gray-1);
 }
 
 .input-btn {
@@ -351,34 +518,15 @@ svg *[stroke] {
   }
 }
 
-.offer-form {
-  --formPadding: 40px;
-  --formGap: clamp(0.3125rem, 1vw ,0.625rem);
-  --blockRowGap: 8px;
-  --formColWidth: 11.25rem;
-  padding: var(--formPadding);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(var(--formColWidth), 1fr));
-  border-radius: var(--border-radius-form);
-  -moz-column-gap: var(--formGap);
-       column-gap: var(--formGap);
-  row-gap: calc(var(--formGap) * 1.2);
-  background-color: var(--color-light-transparent);
+.section {
+  width: 100%;
+  padding-block: 100px;
 }
-@media (max-width: 767px) {
-  .offer-form {
-    --formPadding: 0;
-    justify-items: start;
-    background-color: transparent;
-  }
+.section__sub-heading {
+  color: var(--color-accent-alt);
 }
-.offer-form__block {
-  display: flex;
-  flex-direction: column;
-  row-gap: var(--blockRowGap);
-}
-.offer-form__label {
-  margin-left: 8px;
+.section--clr-gray {
+  color: var(--color-gray-2);
 }
 
 .header {
@@ -438,10 +586,89 @@ svg *[stroke] {
   color: var(--color-light);
 }
 
-.section {
-  width: 100%;
-  padding-block: 100px;
+.offer-form {
+  --formPadding: 40px;
+  --formGap: clamp(0.3125rem, 1vw ,0.625rem);
+  --blockRowGap: 8px;
+  --formColWidth: 11.25rem;
+  padding: var(--formPadding);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--formColWidth), 1fr));
+  border-radius: var(--border-radius-form);
+  -moz-column-gap: var(--formGap);
+       column-gap: var(--formGap);
+  row-gap: calc(var(--formGap) * 1.2);
+  background-color: var(--color-light-transparent);
 }
-.section--clr-gray {
-  color: var(--color-gray-2);
+@media (max-width: 767px) {
+  .offer-form {
+    --formPadding: 0;
+    justify-items: start;
+    background-color: transparent;
+  }
+}
+.offer-form__block {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--blockRowGap);
+}
+.offer-form__label {
+  margin-left: 8px;
+}
+
+.about {
+  --imagesIntersectionAreaWidth: clamp(40px, 10vw, 130px);
+  --imagesIntersectionAreaHeight: clamp(100px, 10vw, 130px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+@media (max-width: 767px) {
+  .about {
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+}
+.about__images-container {
+  width: 100%;
+  max-width: 480px;
+  display: grid;
+  grid-template-columns: var(--imagesIntersectionAreaWidth) 1fr var(--imagesIntersectionAreaWidth);
+  grid-template-rows: var(--imagesIntersectionAreaHeight) 1fr var(--imagesIntersectionAreaHeight);
+}
+@media (max-width: 767px) {
+  .about__images-container {
+    order: 1;
+    display: flex;
+  }
+}
+.about__image {
+  width: 100%;
+  height: auto;
+}
+.about__image:first-child {
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+.about__image:last-child {
+  grid-column: 2/4;
+  grid-row: 2/4;
+}
+.about__body {
+  width: 100%;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 40px;
+}
+@media (max-width: 767px) {
+  .about__body {
+    align-items: center;
+  }
 }/*# sourceMappingURL=main.css.map */
