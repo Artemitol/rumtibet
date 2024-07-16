@@ -1,11 +1,12 @@
 .header {
     --menuColGap: clamp(15px, 2vw, 50px);
-    --menuListColGap: clamp(5px, 1.3vw, 24px);
+    --menuListColGap: clamp(1px, 1.3vw, 24px);
 
     &__inner {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        column-gap: 10px;
         align-items: center;
     }
 
@@ -15,6 +16,10 @@
         flex-direction: row;
         align-items: center;
         column-gap: var(--menuColGap);
+
+        @include tablet-small {
+            display: contents;
+        }
 
         &-list {
             display: flex;

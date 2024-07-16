@@ -9,15 +9,18 @@
     &__background {
         --bgImageHeight: 1000px;
 
-        width: 100vw;
-        height: var(--bgImageHeight);
+        min-height: var(--bgImageHeight);
+        height: 100vw;
+        height: 100dvh;
         position: absolute;
+        z-index: -1;
         top: 0;
         left: 0;
+        right: 0;
         background-image: url("/assets/bg-image.jpg");
         background-position: center;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
 
         
         @include mobile {

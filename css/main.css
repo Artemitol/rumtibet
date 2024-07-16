@@ -207,15 +207,18 @@ ul, ol {
 }
 .site-wrapper__background {
   --bgImageHeight: 1000px;
-  width: 100vw;
-  height: var(--bgImageHeight);
+  min-height: var(--bgImageHeight);
+  height: 100vw;
+  height: 100dvh;
   position: absolute;
+  z-index: -1;
   top: 0;
   left: 0;
+  right: 0;
   background-image: url("/assets/bg-image.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 @media (max-width: 767px) {
   .site-wrapper__background {
@@ -272,8 +275,8 @@ ul, ol {
 .hidden {
   visibility: hidden;
   position: absolute;
-  width: 1px;
-  height: 1px;
+  width: 1px !important;
+  height: 1px !important;
   margin: -1px;
   border: 0;
   padding: 0;
@@ -288,8 +291,8 @@ ul, ol {
   .hidden-desktop {
     visibility: hidden;
     position: absolute;
-    width: 1px;
-    height: 1px;
+    width: 1px !important;
+    height: 1px !important;
     margin: -1px;
     border: 0;
     padding: 0;
@@ -305,8 +308,8 @@ ul, ol {
   .hidden-tablet {
     visibility: hidden;
     position: absolute;
-    width: 1px;
-    height: 1px;
+    width: 1px !important;
+    height: 1px !important;
     margin: -1px;
     border: 0;
     padding: 0;
@@ -322,8 +325,8 @@ ul, ol {
   .hidden-mobile {
     visibility: hidden;
     position: absolute;
-    width: 1px;
-    height: 1px;
+    width: 1px !important;
+    height: 1px !important;
     margin: -1px;
     border: 0;
     padding: 0;
@@ -531,12 +534,14 @@ svg *[stroke] {
 
 .header {
   --menuColGap: clamp(15px, 2vw, 50px);
-  --menuListColGap: clamp(5px, 1.3vw, 24px);
+  --menuListColGap: clamp(1px, 1.3vw, 24px);
 }
 .header__inner {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
   align-items: center;
 }
 .header__menu {
@@ -547,6 +552,11 @@ svg *[stroke] {
   align-items: center;
   -moz-column-gap: var(--menuColGap);
        column-gap: var(--menuColGap);
+}
+@media (min-width: 768px) and (max-width: 1000px) {
+  .header__menu {
+    display: contents;
+  }
 }
 .header__menu-list {
   display: flex;
